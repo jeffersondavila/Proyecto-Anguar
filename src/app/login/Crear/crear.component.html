@@ -1,0 +1,26 @@
+<form>
+  <h2>{{title}}</h2>
+  <div class="mb-3">
+    <select class="form-select" aria-label="Default select example">
+      <option selected>{{codigoPerfil}}</option>
+      <option value="1">Alumno</option>
+      <option value="2">Catedratico</option>
+      <option value="3">Director</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputNombre" class="form-label">{{nombreUsuario}}</label>
+    <input type="text" class="form-control" id="InputNombre" placeholder="Escribir aquí...">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputUser" class="form-label">{{userName}}</label>
+    <input type="email" class="form-control" id="InputUser" placeholder="Escribir aquí...">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword" class="form-label">{{contraseniaUserName}}</label>
+    <input type="password" class="form-control" id="InputPassword" placeholder="Escribir aquí...">
+  </div>
+  <button type="submit" class="btn btn-success espacioEntreBotones">Registrar</button>
+  <button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
+  <button type="submit" class="btn btn-danger espacioEntreBotones">Dar de baja</button>
+</form>

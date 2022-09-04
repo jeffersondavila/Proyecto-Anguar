@@ -1,0 +1,46 @@
+<form>
+    <h2>{{title}}</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col order-1">
+                <div class="mb-3">
+                    <label for="exampleInputCodigo" class="form-label">{{codigo}}</label>
+                    <input type="number" class="form-control" id="InputCodigo" disabled="false">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputCarrera" class="form-label">{{codigoCarrera}}</label>
+                    <input type="number" class="form-control" id="InputCarrera" disabled="false">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputNombre" class="form-label">{{nombre}}</label>
+                    <input type="text" class="form-control" id="InputNombre" placeholder="Escribe aquí...">
+                </div>
+                <button type="submit" class="btn btn-success espacioEntreBotones">Registrar</button>
+                <button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
+                <button type="submit" class="btn btn-danger espacioEntreBotones">Dar de baja</button>
+            </div>
+            <div class="col order-2">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <table class="table table-bordered table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
