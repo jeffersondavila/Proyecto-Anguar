@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AsignacionAlumnoComponent } from '../asignaciones/pages/asignacion-alumno/asignacion-alumno.component';
 import { AsignacionProfesorComponent } from '../asignaciones/pages/asignacion-profesor/asignacion-profesor.component';
-import { CrearUsuarioComponent } from '../login/Crear/crear.component';
 import { CarreraComponent } from '../mantenimientos/pages/carrera/carrera.component';
 import { CursoComponent } from '../mantenimientos/pages/curso/curso.component';
 import { FacultadComponent } from '../mantenimientos/pages/facultad/facultad.component';
@@ -46,8 +45,12 @@ const routes: Routes = [
         component: SedeComponent
       },
       {
-        path: 'usuarios',
-        component: CrearUsuarioComponent
+        path: 'examen',
+        component: ExamenComponent
+      },
+      {
+        path: 'nota',
+        component: NotaComponent
       },
       {
         path: 'asignacionAlumno',
@@ -56,14 +59,6 @@ const routes: Routes = [
       {
         path: 'asignacionProfesor',
         component: AsignacionProfesorComponent
-      },
-      {
-        path: 'examenes',
-        component: ExamenComponent
-      },
-      {
-        path: 'notas',
-        component: NotaComponent
       }
     ]
   }
