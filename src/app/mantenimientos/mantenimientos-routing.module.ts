@@ -16,7 +16,7 @@ const routes:Routes=[
     path:'',
     children:[
       {
-        path: 'prueba',
+        path: 'HomeMantenimientos',
         component: PruebaComponent
       },
       {
@@ -57,7 +57,7 @@ const routes:Routes=[
       },
       {
         path: '**',
-        redirectTo: 'prueba'
+        redirectTo: 'HomeMantenimientos'
       }
     ]
   }

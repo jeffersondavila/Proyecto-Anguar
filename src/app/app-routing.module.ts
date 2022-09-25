@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./mantenimientos/mantenimientos.module').then(m => m.MantenimientosModule)
   },
   {
+    path: 'asignaciones',
+    loadChildren: () => import('./asignaciones/asignaciones.module').then(m => m.AsignacionesModule)
+  },
+  {
     path: '404',
     component: ErrorPageComponent
   },

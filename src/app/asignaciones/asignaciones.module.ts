@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AsignacionAlumnoComponent } from './asignacion-alumno/asignacion-alumno.component';
-import { AsignacionProfesorComponent } from './asignacion-profesor/asignacion-profesor.component';
-
+import { AsignacionAlumnoComponent } from './pages/asignacion-alumno/asignacion-alumno.component';
+import { AsignacionProfesorComponent } from './pages/asignacion-profesor/asignacion-profesor.component';
+import { AsiganacionesRoutingModule } from './asiganaciones-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,11 +10,8 @@ import { AsignacionProfesorComponent } from './asignacion-profesor/asignacion-pr
     AsignacionProfesorComponent
   ],
   imports: [
-    CommonModule
-  ],
-  exports: [
-    AsignacionAlumnoComponent,
-    AsignacionProfesorComponent
+    CommonModule,
+    AsiganacionesRoutingModule
   ]
 })
 export class AsignacionesModule { }
