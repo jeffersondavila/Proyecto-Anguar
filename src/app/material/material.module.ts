@@ -4,13 +4,14 @@ import { MenuComponent } from './menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeroeImageComponent } from './heroe-image/heroe-image.component';
-
+import { CardsComponent } from './cards/cards.component';
 
 
 @NgModule({
   declarations: [
     MenuComponent,
-    HeroeImageComponent
+    HeroeImageComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +20,8 @@ import { HeroeImageComponent } from './heroe-image/heroe-image.component';
   ],
   exports: [
     MenuComponent,
-    HeroeImageComponent
+    HeroeImageComponent,
+    CardsComponent
   ]
 })
 export class MaterialModule { }
