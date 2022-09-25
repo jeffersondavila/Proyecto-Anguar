@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeroeImageComponent } from './heroe-image/heroe-image.component';
 import { CardsComponent } from './cards/cards.component';
+import { CarreraComponent } from '../mantenimientos/pages/carrera/carrera.component';
+import { MaterialRoutingModule } from './material-routing.module';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { CardsComponent } from './cards/cards.component';
   imports: [
     CommonModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MaterialRoutingModule
   ],
   exports: [
     MenuComponent,
