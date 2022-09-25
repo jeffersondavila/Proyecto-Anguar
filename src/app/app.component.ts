@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Primera fase del proyecto';
+  title: string = 'Primera fase del proyecto';
+  mostrar: boolean = false
+
+  mostrarOcultar() {
+
+    if (this.mostrar) {
+      // muestra el contenido
+      this.mostrar = false
+    } else {
+      // oculta el contenido
+      this.mostrar = true
+    }
+  }
 }

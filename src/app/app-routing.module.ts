@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
-const routes:Routes = [
+const routes: Routes = [
   {
     path: 'mantenimientos',
-    loadChildren: () => import('./mantenimientos/mantenimientos.module').then(m=>m.MantenimientosModule)
+    loadChildren: () => import('./mantenimientos/mantenimientos.module').then(m => m.MantenimientosModule)
   },
   {
     path: '404',
@@ -17,7 +17,6 @@ const routes:Routes = [
     redirectTo: '404'
   }
 ]
-
 
 @NgModule({
 
