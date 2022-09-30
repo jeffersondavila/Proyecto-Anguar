@@ -11,7 +11,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SeccionComponent } from './pages/seccion/seccion.component';
 import { SedeComponent } from './pages/sede/sede.component';
 import { MantenimientosRoutingModule } from './mantenimientos-routing.module';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MantenimientosRoutingModule } from './mantenimientos-routing.module';
   ],
   imports: [
     CommonModule,
-    MantenimientosRoutingModule
+    MantenimientosRoutingModule,
+    FormsModule
   ]
 })
 export class MantenimientosModule { }

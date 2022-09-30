@@ -7,8 +7,8 @@ import { interfaceCarrera } from '../interfaces/interfaces';
 export class ServiciosService {
   serviceCarreras: interfaceCarrera[] = [
     {
-      codigo: 0,
-      codigoFacultad: 0,
+      codigo: '#',
+      codigoFacultad: '#',
       nombre: 'Nombre',
     }
   ]

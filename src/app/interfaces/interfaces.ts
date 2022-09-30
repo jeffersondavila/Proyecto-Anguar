@@ -1,6 +1,6 @@
 export interface interfaceCarrera {
-    codigo: number,
-    codigoFacultad: number,
+    codigo: string,
+    codigoFacultad: string,
     nombre: string,
     estado?: number
 }

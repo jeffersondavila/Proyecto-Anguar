@@ -2,21 +2,21 @@
     <div class="container">
         <h2>{{title}}</h2>
         <div class="row">
-            <div class="col order-1">
+            <div class="col order-1" (ngSubmit)="ingresar()">
                 <div class="mb-3">
                     <label for="exampleInputCodigo" class="form-label">{{codigo}}</label>
                     <input type="number" class="form-control" id="InputCodigo" aria-describedby="codigoHelp"
-                        disabled="false">
+                        name="codigo" [(ngModel)]="registroCarrera.codigo">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputFacultad" class="form-label">{{codigoFacultad}}</label>
                     <input type="number" class="form-control" id="InputFacultad" aria-describedby="facultadHelp"
-                        disabled="false">
+                    name="codigoFacultad" [(ngModel)]="registroCarrera.codigoFacultad">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputNombre" class="form-label">{{nombre}}</label>
                     <input type="text" class="form-control" id="InputNombre" aria-describedby="nombrelHelp"
-                        placeholder="Escribe aquí...">
+                        placeholder="Escribe aquí..." name="nombre" [(ngModel)]="registroCarrera.nombre">
                 </div>
                 <button type="submit" class="btn btn-success espacioEntreBotones">Registrar</button>
                 <button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
@@ -35,10 +35,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row" *ngFor="let tablaCarrera of tablaCarreras">{{tablaCarrera.codigo}}</th>
+                                <td *ngFor="let tablaCarrera of tablaCarreras">{{tablaCarrera.codigoFacultad}}</td>
+                                <td *ngFor="let tablaCarrera of tablaCarreras">{{tablaCarrera.nombre}}</td>
                             </tr>
                         </tbody>
                     </table>
