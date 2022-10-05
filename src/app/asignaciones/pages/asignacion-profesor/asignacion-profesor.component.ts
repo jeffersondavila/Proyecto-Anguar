@@ -7,4 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsignacionProfesorComponent {
   titleAsignacionProfesor:string='Asignación Profesor';
+  carreraAsignacionProfesor:string='Seleccione la carrera';
+  sedeAsignacionProfesor:string='Seleccione la sede';
+  seccionAsignacionProfesor:string='Seleccione la sección';
+  cursoAsignacionProfesor:string='Seleccione el curso';
+  carnetAsignacionProfesor:string='Ingrese el carnet';
+  usuarioAsignacionProfesor:string='Seleccione el tipo de usuario';
 }

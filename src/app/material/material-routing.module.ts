@@ -11,11 +11,16 @@ import { SeccionComponent } from '../mantenimientos/pages/seccion/seccion.compon
 import { SedeComponent } from '../mantenimientos/pages/sede/sede.component';
 import { ExamenComponent } from '../mantenimientos/pages/examen/examen.component';
 import { NotaComponent } from '../mantenimientos/pages/nota/nota.component';
+import { AlumnoComponent } from '../mantenimientos/pages/alumno/alumno.component';
 
 const routes: Routes = [
   {
     path: '',
     children: [
+      {
+        path: 'alumno',
+        component: AlumnoComponent
+      },
       {
         path: 'carrera',
         component: CarreraComponent

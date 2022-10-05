@@ -10,14 +10,19 @@ import { NotaComponent } from './pages/nota/nota.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SeccionComponent } from './pages/seccion/seccion.component';
 import { SedeComponent } from './pages/sede/sede.component';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
 
 const routes:Routes=[
   {
     path:'',
     children:[
       {
-        path: 'HomeMantenimientos',
+        path: 'HomeMantenimientos', //Este es el contenedor de los mantenimientos
         component: PruebaComponent
+      },
+      {
+        path: 'alumno',
+        component: AlumnoComponent
       },
       {
         path: 'carrera',

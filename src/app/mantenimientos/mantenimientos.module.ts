@@ -12,12 +12,13 @@ import { SeccionComponent } from './pages/seccion/seccion.component';
 import { SedeComponent } from './pages/sede/sede.component';
 import { MantenimientosRoutingModule } from './mantenimientos-routing.module';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { AlumnoComponent } from './pages/alumno/alumno.component';
 
 
 @NgModule({
   declarations: [
     PruebaComponent,
+    AlumnoComponent,
     CarreraComponent,
     CursoComponent,
     ExamenComponent,
