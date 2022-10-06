@@ -12,6 +12,7 @@ import { SedeComponent } from '../mantenimientos/pages/sede/sede.component';
 import { ExamenComponent } from '../mantenimientos/pages/examen/examen.component';
 import { NotaComponent } from '../mantenimientos/pages/nota/nota.component';
 import { AlumnoComponent } from '../mantenimientos/pages/alumno/alumno.component';
+import { CrearUsuarioComponent } from '../mantenimientos/pages/Crear/crear.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
       {
         path: 'nota',
         component: NotaComponent
+      },
+      {
+        path: 'crear',
+        component: CrearUsuarioComponent
       },
       {
         path: 'asignacionAlumno',

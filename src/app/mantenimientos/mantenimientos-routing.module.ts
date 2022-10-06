@@ -11,6 +11,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SeccionComponent } from './pages/seccion/seccion.component';
 import { SedeComponent } from './pages/sede/sede.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
+import { CrearUsuarioComponent } from './pages/Crear/crear.component';
 
 const routes:Routes=[
   {
@@ -59,6 +60,10 @@ const routes:Routes=[
       {
         path: 'sede',
         component: SedeComponent
+      },
+      {
+        path: 'crear',
+        component: CrearUsuarioComponent
       },
       {
         path: '**',
