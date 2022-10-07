@@ -1,14 +1,8 @@
 .espacioSuperior {
     padding-top: 30vh;
-}
-.containerIngreso {
     width: 50%;
     margin: 0 auto;
 }
 .containerIngreso a {
     float: right;
-}
-.containerIngreso article {
-    display: block;
-    background-color: red;
 }

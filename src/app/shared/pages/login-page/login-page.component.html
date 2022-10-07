@@ -1,0 +1,16 @@
+<form class="container espacioSuperior">
+    <h2>{{title}}</h2>
+    <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">{{titleEmail}}</label>
+        <input type="email" class="form-control" id="InputEmail" placeholder="Escribir aquí...">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword" class="form-label">{{titlePassword}}</label>
+        <input type="password" class="form-control" id="InputPassword" placeholder="Escribir aquí...">
+    </div>
+    <a routerLink="/shared/home" class="btn btn-primary espacioEntreBotones">Ingresar</a>
+    <div class="containerIngreso">
+        <a routerLink="/login-ingreso/recuperar">¿Restablecer cuenta?</a><br>
+        <a routerLink="/login-ingreso/crear">Crear cuenta</a><br>
+    </div>
+</form>

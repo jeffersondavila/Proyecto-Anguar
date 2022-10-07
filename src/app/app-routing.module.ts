@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { LoginPageComponent } from './shared/pages/login-page/login-page.component';
 
 const routes: Routes = [
   {
@@ -12,13 +12,21 @@ const routes: Routes = [
     loadChildren: () => import('./asignaciones/asignaciones.module').then(m => m.AsignacionesModule)
   },
   {
-    path: '404',
-    component: ErrorPageComponent
+    path: 'login-ingreso',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'shared',
+    loadChildren: () => import('./shared/shared.module').then(m => m.sharedModule)
+  },
+  {
+    path: 'login',
+    component: LoginPageComponent
   },
   {
     path: '**',
     //component: ErrorPageComponent
-    redirectTo: '404'
+    redirectTo: 'login'
   }
 ]
 

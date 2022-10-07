@@ -1,3 +1,11 @@
 .espacioEntreBotones {
     margin: 1rem;
 }
+.container-crear {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+.containerIngreso {
+    float: right;
+}

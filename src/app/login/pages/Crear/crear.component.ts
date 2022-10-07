@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crear.component.css']
 })
 export class CrearUsuarioComponent {
-  title:string='Sig up';
+  title:string='Sign up';
   codigoPerfil:string='Seleccionar tipo de usuario';
   nombreUsuario:string='Ingresar nombre del usuario';
   userName:string='Ingresar username';

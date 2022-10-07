@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-
+  title:string='Sig in';
+  titleEmail:string='Ingresar Usuario Institucional';
+  titlePassword:string='Ingresar Contraseña';
   constructor() { }
 
   ngOnInit(): void {
