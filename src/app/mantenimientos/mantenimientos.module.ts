@@ -14,6 +14,7 @@ import { MantenimientosRoutingModule } from './mantenimientos-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { CrearUsuarioComponent } from './pages/Crear/crear.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CrearUsuarioComponent } from './pages/Crear/crear.component';
   imports: [
     CommonModule,
     MantenimientosRoutingModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ]
 })
 export class MantenimientosModule { }
