@@ -16,8 +16,6 @@ import { MaterialRoutingModule } from './material-routing.module';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    FormsModule,
     MaterialRoutingModule
   ],
   exports: [
