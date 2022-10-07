@@ -10,8 +10,6 @@ import { MaterialModule } from './material/material.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule
   ],
