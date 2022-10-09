@@ -35,8 +35,8 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule,
     MantenimientosRoutingModule,
-    FormsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class MantenimientosModule { }
