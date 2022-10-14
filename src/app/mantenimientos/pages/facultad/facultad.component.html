@@ -24,17 +24,15 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let facultad of facultad">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{facultad.codigo}}</th>
+                                <td>{{facultad.nombre}}</td>
+                                <td>{{facultad.estado}}</td>
                             </tr>
                         </tbody>
                     </table>

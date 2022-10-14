@@ -26,11 +26,11 @@ export interface interfaceAlumno {
 //     punteo: number,
 //     estado?: number
 // }
-// export interface interfaceFacultad {
-//     codigo: number,
-//     nombre: string,
-//     estado?: number
-// }
+export interface interfaceFacultad {
+    codigo: number,
+    nombre: string,
+    estado?: number
+}
 // export interface interfaceProfesor {
 //     codigo: number,
 //     nombre: string,
