@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiciosService } from 'src/app/services/servicios.service';
 import { interfaceFacultad } from '../interfaces/admin.interface';
+import { MantenimientoServiciosService } from '../services/mantenimiento-servicios.service';
 
 @Component({
   selector: 'app-facultad',
@@ -14,7 +14,7 @@ export class FacultadComponent implements OnInit {
   estado:string='Email';
 
   facultad:interfaceFacultad[]=[];
-  constructor(private facultadService: ServiciosService) { }
+  constructor(private facultadService: MantenimientoServiciosService) { }
 
   ngOnInit(): void {
     this.facultadService.getFacultad().subscribe(facultad=>this.facultad = facultad);

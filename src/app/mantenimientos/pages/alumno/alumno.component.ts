@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { interfaceAlumno } from '../interfaces/admin.interface';
+import { MantenimientoServiciosService } from '../services/mantenimiento-servicios.service';
 
 @Component({
   selector: 'app-alumno',
@@ -14,33 +15,10 @@ export class AlumnoComponent {
   telefono: string = 'Número telefonico';
   email: string = 'Email';
 
-  // @Input() alumno: interfaceAlumno = {
-  //   codigo: 0,
-  //   nombre: '',
-  //   telefono: 0,
-  //   email: '',
-  //   direccion: '',
-  //   estado: 1
-  // }
-  // @Output() nuevoAlumno: EventEmitter<interfaceAlumno> = new EventEmitter();
-  // ingresar() {
-  //   if (this.alumno.nombre.trim().length === 0) {
-  //     return;
-  //   }
-  //   console.log(this.alumno);
-  //   this.nuevoAlumno.emit(this.alumno);
-  //   this.alumno = {
-  //     codigo: 0,
-  //     nombre: '',
-  //     telefono: 0,
-  //     email: '',
-  //     direccion: '',
-  //     estado: 1
-  //   }
-  // }
+  alumno:interfaceAlumno[]=[];
+  constructor(private alumnoService: MantenimientoServiciosService) { }
 
-  // @Input() registros: interfaceAlumno[] = [];
-  // agregarNuevousuario(argumento: interfaceAlumno) {
-  //   this.registros.push(argumento);
-  // }
+  ngOnInit(): void {
+    this.alumnoService.getAlumno().subscribe(alumno=>this.alumno = alumno);
+  }
 }
