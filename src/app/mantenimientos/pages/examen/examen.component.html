@@ -39,17 +39,21 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Alumno</th>
+                                <th scope="col">Profesor</th>
+                                <th scope="col">Punteo</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let examen of examen">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{examen.codigo}}</th>
+                                <td>{{examen.codigoCurso}}</td>
+                                <td>{{examen.codigoAsignacionAlumno}}</td>
+                                <td>{{examen.codigoAsignacionProfesor}}</td>
+                                <td>{{examen.punteo}}</td>
+                                <td>{{examen.estado}}</td>
                             </tr>
                         </tbody>
                     </table>
