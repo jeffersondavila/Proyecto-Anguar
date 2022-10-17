@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <form style="padding-top: 5rem;">
     <div class="container">
         <h2>{{title}}</h2>
@@ -34,17 +35,21 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let profesor of profesor">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{profesor.codigo}}</th>
+                                <td>{{profesor.nombre}}</td>
+                                <td>{{profesor.telefono}}</td>
+                                <td>{{profesor.email}}</td>
+                                <td>{{profesor.direccion}}</td>
+                                <td>{{profesor.estado}}</td>
                             </tr>
                         </tbody>
                     </table>

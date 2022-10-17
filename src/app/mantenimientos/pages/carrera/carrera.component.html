@@ -1,8 +1,9 @@
+<app-menu></app-menu>
 <form style="padding-top: 5rem;">
     <div class="container">
         <h2>{{title}}</h2>
         <div class="row">
-            <div class="col order-1" (ngSubmit)="ingresar()">
+            <!-- <div class="col order-1" (ngSubmit)="ingresar()">
                 <div class="mb-3">
                     <label for="exampleInputCodigo" class="form-label">{{codigo}}</label>
                     <input type="number" class="form-control" id="InputCodigo" aria-describedby="codigoHelp"
@@ -21,6 +22,26 @@
                 <button type="submit" class="btn btn-success espacioEntreBotones">Registrar</button>
                 <button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
                 <button type="submit" class="btn btn-danger espacioEntreBotones">Dar de baja</button>
+            </div> -->
+            <div class="col order-1">
+                <div class="mb-3">
+                    <label for="exampleInputCodigo" class="form-label">{{codigo}}</label>
+                    <input type="number" class="form-control" id="InputCodigo" aria-describedby="codigoHelp"
+                        name="codigo">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputFacultad" class="form-label">{{codigoFacultad}}</label>
+                    <input type="number" class="form-control" id="InputFacultad" aria-describedby="facultadHelp"
+                    name="codigoFacultad">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputNombre" class="form-label">{{nombre}}</label>
+                    <input type="text" class="form-control" id="InputNombre" aria-describedby="nombrelHelp"
+                        placeholder="Escribe aquí..." name="nombre">
+                </div>
+                <button type="submit" class="btn btn-success espacioEntreBotones">Registrar</button>
+                <button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
+                <button type="submit" class="btn btn-danger espacioEntreBotones">Dar de baja</button>
             </div>
             <div class="col order-2">
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
@@ -28,16 +49,24 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Facultad</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <!-- <tbody>
                             <tr>
                                 <th scope="row" *ngFor="let tablaCarrera of tablaCarreras">{{tablaCarrera.codigo}}</th>
                                 <td *ngFor="let tablaCarrera of tablaCarreras">{{tablaCarrera.codigoFacultad}}</td>
                                 <td *ngFor="let tablaCarrera of tablaCarreras">{{tablaCarrera.nombre}}</td>
+                            </tr>
+                        </tbody> -->
+                        <tbody *ngFor="let carrera of carrera">
+                            <tr>
+                                <th scope="row">{{carrera.codigo}}</th>
+                                <td>{{carrera.codigoFacultad}}</td>
+                                <td>{{carrera.nombre}}</td>
+                                <td>{{carrera.estado}}</td>
                             </tr>
                         </tbody>
                     </table>

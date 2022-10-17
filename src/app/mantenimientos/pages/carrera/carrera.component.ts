@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { interfaceCarrera } from 'src/app/interfaces/interfaces';
-import { ServiciosService } from 'src/app/services/servicios.service';
+import { Component } from '@angular/core';
+import { interfaceCarrera } from '../interfaces/admin.interface';
+import { MantenimientoServiciosService } from '../services/mantenimiento-servicios.service';
 
 @Component({
   selector: 'app-carrera',
@@ -14,34 +14,42 @@ export class CarreraComponent {
   nombre:string='Nombre';
   estado:string='Email';
 
-  @Input() registroCarrera: interfaceCarrera = {
-    codigo: '',
-    codigoFacultad: '',
-    nombre: '',
-  }
-  @Output() onNewUser: EventEmitter<interfaceCarrera> = new EventEmitter();
-  ingresar() {
-    if (this.registroCarrera.nombre.trim().length === 0) {
-      return;
-    }
-    console.log(this.registroCarrera);
-    this.onNewUser.emit(this.registroCarrera)
-    this.registroCarrera = {
-      codigo: '',
-      codigoFacultad: '',
-      nombre: '',
-    }
-  }
+  // @Input() registroCarrera: interfaceCarrera = {
+  //   codigo: '',
+  //   codigoFacultad: '',
+  //   nombre: '',
+  // }
+  // @Output() onNewUser: EventEmitter<interfaceCarrera> = new EventEmitter();
+  // ingresar() {
+  //   if (this.registroCarrera.nombre.trim().length === 0) {
+  //     return;
+  //   }
+  //   console.log(this.registroCarrera);
+  //   this.onNewUser.emit(this.registroCarrera)
+  //   this.registroCarrera = {
+  //     codigo: '',
+  //     codigoFacultad: '',
+  //     nombre: '',
+  //   }
+  // }
 
   // Tabla de datos
-  @Input() tablaCarreras: interfaceCarrera[] = [];
+  // @Input() tablaCarreras: interfaceCarrera[] = [];
 
-  // Intersección datos
-  carreras: interfaceCarrera[] = [];
-  agregarNuevaCarrera(argumento: interfaceCarrera) {
-    this.carreras.push(argumento);
-  }
-  constructor(private ingresoServ: ServiciosService) {
-    this.carreras = this.ingresoServ.serviceCarreras;
+  // // Intersección datos
+  // carreras: interfaceCarrera[] = [];
+  // agregarNuevaCarrera(argumento: interfaceCarrera) {
+  //   this.carreras.push(argumento);
+  // }
+  // constructor(private ingresoServ: ServiciosService) {
+  //   this.carreras = this.ingresoServ.serviceCarreras;
+  // }
+
+  //Llenado de tabla
+  carrera:interfaceCarrera[]=[];
+  constructor(private carreraService: MantenimientoServiciosService) { }
+
+  ngOnInit(): void {
+    this.carreraService.getCarrera().subscribe(carrera=>this.carrera = carrera);
   }
 }

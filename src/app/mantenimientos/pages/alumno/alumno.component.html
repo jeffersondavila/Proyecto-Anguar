@@ -35,17 +35,21 @@
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Direccion</th>
+                  <th scope="col">Estado</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody *ngFor="let alumno of alumno">
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <th scope="row">{{alumno.codigo}}</th>
+                  <td>{{alumno.nombre}}</td>
+                  <td>{{alumno.telefono}}</td>
+                  <td>{{alumno.email}}</td>
+                  <td>{{alumno.direccion}}</td>
+                  <td>{{alumno.estado}}</td>
                 </tr>
               </tbody>
             </table>
