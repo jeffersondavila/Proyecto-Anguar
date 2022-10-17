@@ -33,14 +33,16 @@
                                 <th scope="col">Examen</th>
                                 <th scope="col">Nota Máxima</th>
                                 <th scope="col">Nota Mimina</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let nota of nota">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{nota.codigo}}</th>
+                                <td>{{nota.codigoExamen}}</td>
+                                <td>{{nota.maxima}}</td>
+                                <td>{{nota.minima}}</td>
+                                <td>{{nota.estado}}</td>
                             </tr>
                         </tbody>
                     </table>

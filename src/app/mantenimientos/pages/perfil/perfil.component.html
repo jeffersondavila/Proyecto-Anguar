@@ -26,17 +26,17 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let perfil of perfil">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{perfil.codigo}}</th>
+                                <td>{{perfil.nombre}}</td>
+                                <td>{{perfil.descripcion}}</td>
+                                <td>{{perfil.estado}}</td>
                             </tr>
                         </tbody>
                     </table>
