@@ -48,17 +48,25 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Carrera</th>
+                                <th scope="col">Sede</th>
+                                <th scope="col">Sección</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Carnet</th>
+                                <th scope="col">Tipo Usuario</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let profesor of profesor">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{profesor.codigoAsignacion}}</th>
+                                <td>{{profesor.codigoCarrera}}</td>
+                                <td>{{profesor.codigoSede}}</td>
+                                <td>{{profesor.codigoSeccion}}</td>
+                                <td>{{profesor.codigoCurso}}</td>
+                                <td>{{profesor.carnet}}</td>
+                                <td>{{profesor.tipoUsuario}}</td>
+                                <td>{{profesor.estado}}</td>
                             </tr>
                         </tbody>
                     </table>
