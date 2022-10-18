@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { interfaceAsignacionProfesor } from '../interfaces/asignaciones.interface';
+import { AsignacioneServiciosService } from '../services/asignacione-servicios.service';
 
 @Component({
   selector: 'app-asignacion-profesor',
@@ -13,4 +15,11 @@ export class AsignacionProfesorComponent {
   cursoAsignacionProfesor:string='Seleccione el curso';
   carnetAsignacionProfesor:string='Ingrese el carnet';
   usuarioAsignacionProfesor:string='Seleccione el tipo de usuario';
+
+  profesor:interfaceAsignacionProfesor[]=[];
+  constructor(private asignacionProfesorService: AsignacioneServiciosService) { }
+
+  ngOnInit(): void {
+    this.asignacionProfesorService.getProfesor().subscribe(profesor=>this.profesor = profesor);
+  }
 }

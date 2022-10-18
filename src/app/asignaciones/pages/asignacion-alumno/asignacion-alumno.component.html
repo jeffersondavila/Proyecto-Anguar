@@ -48,17 +48,25 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Carrera</th>
+                                <th scope="col">Sede</th>
+                                <th scope="col">Sección</th>
+                                <th scope="col">Curso</th>
+                                <th scope="col">Carnet</th>
+                                <th scope="col">Tipo Usuario</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let alumno of alumno">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{alumno.codigoAsignacion}}</th>
+                                <td>{{alumno.codigoCarrera}}</td>
+                                <td>{{alumno.codigoSede}}</td>
+                                <td>{{alumno.codigoSeccion}}</td>
+                                <td>{{alumno.codigoCurso}}</td>
+                                <td>{{alumno.carnet}}</td>
+                                <td>{{alumno.tipoUsuario}}</td>
+                                <td>{{alumno.estado}}</td>
                             </tr>
                         </tbody>
                     </table>
