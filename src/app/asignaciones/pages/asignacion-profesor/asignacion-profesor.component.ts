@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { interfaceCarrera } from 'src/app/mantenimientos/pages/interfaces/admin.interface';
+import { interfaceCarrera, interfaceCurso, interfacePerfil, interfaceSeccion, interfaceSede } from 'src/app/mantenimientos/pages/interfaces/admin.interface';
 import { interfaceAsignacionProfesor } from '../interfaces/asignaciones.interface';
 import { AsignacioneServiciosService } from '../services/asignacione-servicios.service';
 
@@ -19,11 +19,19 @@ export class AsignacionProfesorComponent {
 
   profesor: interfaceAsignacionProfesor[] = [];
   carrera: interfaceCarrera[] = [];
+  sede: interfaceSede[] = [];
+  seccion: interfaceSeccion[] = [];
+  curso: interfaceCurso[] = [];
+  perfil: interfacePerfil[] = [];
 
   constructor(private asignacionProfesorService: AsignacioneServiciosService) { }
 
   ngOnInit(): void {
     this.asignacionProfesorService.getProfesor().subscribe(profesor => this.profesor = profesor);
     this.asignacionProfesorService.getCarrera().subscribe(carrera => this.carrera = carrera);
+    this.asignacionProfesorService.getSede().subscribe(sede => this.sede = sede);
+    this.asignacionProfesorService.getSeccion().subscribe(seccion => this.seccion = seccion);
+    this.asignacionProfesorService.getCurso().subscribe(curso => this.curso = curso);
+    this.asignacionProfesorService.getPerfil().subscribe(perfil => this.perfil = perfil);
   }
 }

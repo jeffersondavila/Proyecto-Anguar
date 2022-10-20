@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { interfaceCarrera } from 'src/app/mantenimientos/pages/interfaces/admin.interface';
+import { interfaceCarrera, interfaceCurso, interfacePerfil, interfaceSeccion, interfaceSede } from 'src/app/mantenimientos/pages/interfaces/admin.interface';
 import { interfaceAsignacionAlumno, interfaceAsignacionProfesor } from '../interfaces/asignaciones.interface';
 
 @Injectable({
@@ -20,5 +20,17 @@ export class AsignacioneServiciosService {
   // Llenar cbx
   getCarrera(){
     return this.http.get<interfaceCarrera[]>('http://localhost:3000/carrera')
+  }
+  getSede(){
+    return this.http.get<interfaceSede[]>('http://localhost:3000/sede')
+  }
+  getSeccion(){
+    return this.http.get<interfaceSeccion[]>('http://localhost:3000/seccion')
+  }
+  getCurso(){
+    return this.http.get<interfaceCurso[]>('http://localhost:3000/curso')
+  }
+  getPerfil(){
+    return this.http.get<interfacePerfil[]>('http://localhost:3000/perfil')
   }
 }
