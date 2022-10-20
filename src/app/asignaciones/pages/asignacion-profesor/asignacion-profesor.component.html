@@ -6,9 +6,7 @@
             <div class="col order-1">
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{carreraAsignacionProfesor}}</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option *ngFor="let carrera of carrera" value="carrera.codigo">{{carrera.nombre}}</option>
                 </select>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{sedeAsignacionProfesor}}</option>
