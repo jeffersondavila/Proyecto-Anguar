@@ -7,7 +7,7 @@ export interface interfaceAlumno {
     estado?: number
 }
 export interface interfaceCarrera {
-    codigo: number,
+    id?: number,
     codigoFacultad: number,
     nombre: string,
     estado?: number

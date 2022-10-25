@@ -6,27 +6,19 @@
             <div class="col order-1">
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{carreraAsignacionProfesor}}</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option *ngFor="let carrera of carrera" value="carrera.codigo">{{carrera.nombre}}</option>
                 </select>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{sedeAsignacionProfesor}}</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option *ngFor="let sede of sede" value="sede.codigo">{{sede.nombre}}</option>
                 </select>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{seccionAsignacionProfesor}}</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option *ngFor="let seccion of seccion" value="seccion.codigo">{{seccion.nombre}}</option>
                 </select>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{cursoAsignacionProfesor}}</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option *ngFor="let curso of curso" value="curso.codigo">{{curso.nombre}}</option>
                 </select>
                 <div class="mb-3">
                     <label for="exampleInputCarnet" class="form-label">{{carnetAsignacionProfesor}}</label>
@@ -34,9 +26,7 @@
                 </div>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>{{usuarioAsignacionProfesor}}</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option *ngFor="let perfil of perfil" value="perfil.codigo">{{perfil.nombre}}</option>
                 </select>
                 <button type="submit" class="btn btn-success espacioEntreBotones">Registrar</button>
                 <button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
