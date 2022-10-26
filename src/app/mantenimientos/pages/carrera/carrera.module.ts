@@ -11,9 +11,9 @@ import { ContenedorComponent } from './contenedor/contenedor.component';
 
 @NgModule({
   declarations: [
-    FormularioComponent,
-    TableroComponent,
-    ContenedorComponent
+    // FormularioComponent,
+    // TableroComponent,
+    // ContenedorComponent
   ],
   imports: [
     CommonModule,
