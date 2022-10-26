@@ -12,6 +12,7 @@ import { SeccionComponent } from './pages/seccion/seccion.component';
 import { SedeComponent } from './pages/sede/sede.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { CrearUsuarioComponent } from './pages/Crear/crear.component';
+import { ContenedorComponent } from './pages/carrera/contenedor/contenedor.component';
 
 const routes:Routes=[
   {
@@ -27,7 +28,7 @@ const routes:Routes=[
       },
       {
         path: 'carrera',
-        component: CarreraComponent
+        component: ContenedorComponent
       },
       {
         path: 'curso',

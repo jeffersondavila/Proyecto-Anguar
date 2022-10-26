@@ -1,0 +1,18 @@
+<div class="mb-3">
+    <label for="exampleInputCodigo" class="form-label">{{codigo}}</label>
+    <input type="number" class="form-control" id="InputCodigo" aria-describedby="codigoHelp"
+        name="id" [(ngModel)]="addCarrera.id">
+</div>
+<div class="mb-3">
+    <label for="exampleInputFacultad" class="form-label">{{codigoFacultad}}</label>
+    <input type="number" class="form-control" id="InputFacultad" aria-describedby="facultadHelp"
+    name="codigoFacultad" [(ngModel)]="addCarrera.codigoFacultad">
+</div>
+<div class="mb-3">
+    <label for="exampleInputNombre" class="form-label">{{nombre}}</label>
+    <input type="text" class="form-control" id="InputNombre" aria-describedby="nombrelHelp"
+        placeholder="Escribe aquí..." name="nombre" [(ngModel)]="addCarrera.nombre">
+</div>
+<button type="submit" class="btn btn-success espacioEntreBotones" (click)="guardar()">Registrar</button>
+<button type="submit" class="btn btn-warning espacioEntreBotones">Modificar</button>
+<button type="submit" class="btn btn-danger espacioEntreBotones" (click)="borrar()">Dar de baja</button>

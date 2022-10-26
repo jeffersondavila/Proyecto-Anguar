@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { CrearUsuarioComponent } from './pages/Crear/crear.component';
 import { MaterialModule } from '../material/material.module';
+import { ContenedorComponent } from './pages/carrera/contenedor/contenedor.component';
+import { FormularioComponent } from './pages/carrera/formulario/formulario.component';
+import { TableroComponent } from './pages/carrera/tablero/tablero.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { MaterialModule } from '../material/material.module';
     PerfilComponent,
     SeccionComponent,
     SedeComponent,
-    CrearUsuarioComponent
+    CrearUsuarioComponent,
+    FormularioComponent,
+    TableroComponent,
+    ContenedorComponent
   ],
   imports: [
     CommonModule,

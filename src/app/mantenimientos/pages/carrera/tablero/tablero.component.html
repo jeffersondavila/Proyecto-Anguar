@@ -1,0 +1,20 @@
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-bordered table-striped mb-0">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Facultad</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let carrera of carrera">
+            <tr>
+                <th scope="row">{{carrera.id}}</th>
+                <td>{{carrera.codigoFacultad}}</td>
+                <td>{{carrera.nombre}}</td>
+                <td>{{carrera.estado}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
