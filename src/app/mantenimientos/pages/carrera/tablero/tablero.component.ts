@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { interfaceCarrera } from '../../interfaces/admin.interface';
 import { MantenimientoServiciosService } from '../../services/mantenimiento-servicios.service';
@@ -10,7 +10,7 @@ import { MantenimientoServiciosService } from '../../services/mantenimiento-serv
 })
 export class TableroComponent implements OnInit {
 
-  carrera: interfaceCarrera[] = [];
+  @Input() carrera: interfaceCarrera[] = [];
 
   constructor(private carreraService: MantenimientoServiciosService, private activatedRoute: ActivatedRoute, private router: Router) { }
 

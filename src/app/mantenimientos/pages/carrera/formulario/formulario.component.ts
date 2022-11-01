@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { interfaceCarrera } from '../../interfaces/admin.interface';
 import { MantenimientoServiciosService } from '../../services/mantenimiento-servicios.service';
@@ -16,7 +16,8 @@ export class FormularioComponent implements OnInit {
   nombre: string = 'Nombre';
   estado: string = 'Email';
 
-  addCarrera: interfaceCarrera = {
+  @Input() carrera: interfaceCarrera[] = [];
+  @Input() addCarrera: interfaceCarrera = {
     codigoFacultad: 0,
     nombre: '',
     estado: 1,
@@ -25,16 +26,24 @@ export class FormularioComponent implements OnInit {
   constructor(private carreraService: MantenimientoServiciosService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void { }
+  @Output() onNewUser: EventEmitter<interfaceCarrera> = new EventEmitter();
 
   guardar() {
     if (this.addCarrera.id) {
       //actualizar
       this.carreraService.actualizarCarrera(this.addCarrera)
-        .subscribe(addCarrera => console.log('Actualizando...', addCarrera))
+        .subscribe(addCarrera => console.log('Actualizando...', addCarrera));
     } else {
       //crear
       this.carreraService.agregarCarrera(this.addCarrera)
-        .subscribe(addCarrera => console.log('Agregando...', addCarrera.id))
+        .subscribe(addCarrera => console.log('Agregando...', addCarrera.id));
+    }
+    this.carreraService.getCarrera().subscribe(carrera => this.carrera = carrera);
+    this.onNewUser.emit(this.addCarrera);
+    this.addCarrera = {
+      codigoFacultad: 0,
+      nombre: '',
+      estado: 1,
     }
   }
 
@@ -43,5 +52,7 @@ export class FormularioComponent implements OnInit {
       .subscribe(resp => {
         this.router.navigate(['/mantenimientos/carrera'])
       });
+    this.carreraService.getCarrera().subscribe(carrera => this.carrera = carrera);
+    this.onNewUser.emit(this.addCarrera);
   }
 }

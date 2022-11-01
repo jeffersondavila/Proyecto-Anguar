@@ -4,10 +4,10 @@
         <h2>{{title}}</h2>
         <div class="row">
             <div class="col order-1">
-                <app-formulario></app-formulario>
+                <app-formulario (onNewUser)="agregarNuevo($event)"></app-formulario>
             </div>
             <div class="col order-2">
-                <app-tablero></app-tablero>
+                <app-tablero [carrera]="ingresos"></app-tablero>
             </div>
         </div>
     </div>
