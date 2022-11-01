@@ -23,6 +23,7 @@ export class ContenedorComponent implements OnInit {
 
   ngOnInit(): void {
     //Llenado de tabla
+    this.carreraService.getCarrera().subscribe(carrera => this.ingresos = carrera);
   }
 
 }

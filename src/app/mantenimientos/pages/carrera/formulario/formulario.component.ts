@@ -38,13 +38,13 @@ export class FormularioComponent implements OnInit {
       this.carreraService.agregarCarrera(this.addCarrera)
         .subscribe(addCarrera => console.log('Agregando...', addCarrera.id));
     }
+    this.carreraService.getCarrera().subscribe(carrera => this.carrera = carrera);
     this.onNewUser.emit(this.addCarrera);
     this.addCarrera = {
       codigoFacultad: 0,
       nombre: '',
       estado: 1,
     }
-    this.carreraService.getCarrera().subscribe(carrera => this.carrera = carrera);
   }
 
   borrar() {
