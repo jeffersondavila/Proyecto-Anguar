@@ -52,6 +52,7 @@ export class FormularioComponent implements OnInit {
       .subscribe(resp => {
         this.router.navigate(['/mantenimientos/carrera'])
       });
+    this.carreraService.getCarrera().subscribe(carrera => this.carrera = carrera);
     this.onNewUser.emit(this.addCarrera);
   }
 }
